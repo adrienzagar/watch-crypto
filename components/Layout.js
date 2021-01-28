@@ -16,7 +16,7 @@ export default function Layout({ children, page }) {
                             Accueil
                         </button>
                     </Link>
-                    <Link href="/">
+                    <Link href="/about">
                         <button className="bg-blue-200 p-3 m2 rounded-3xl hover:shadow-md border-2 border-blue-300">
                             A propos
                         </button>
@@ -33,7 +33,24 @@ export default function Layout({ children, page }) {
                     />
                 </div>
             </header>
-            {children}
+            <main className="pt-4 mx-20">{children}</main>
+
+            <footer className="p-10">
+                <Image
+                        src="/crypto.jpg"
+                        alt='crypto'
+                        width="400"
+                        height="25"
+                        className="rounded-3xl object-cover"
+                        quality={100}
+                />
+                <ul className="pt-10 pb-4 flex justify-around">
+                    <li>A propos</li>
+                    <li>Qui sommes-nous</li>
+                    <li>Tutorial Next</li>
+                </ul>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sit maiores provident placeat vel numquam impedit id repudiandae alias quos.</p>
+            </footer>
         </div>
     )
 }
